@@ -96,45 +96,69 @@
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="Dialog plain 12"/>
     <a name="clabelcolor" val="#000000"/>
-    <wire from="(280,220)" to="(280,250)"/>
-    <wire from="(260,220)" to="(260,230)"/>
-    <wire from="(240,260)" to="(270,260)"/>
-    <wire from="(240,240)" to="(270,240)"/>
-    <wire from="(240,220)" to="(250,220)"/>
-    <wire from="(240,230)" to="(260,230)"/>
-    <wire from="(270,260)" to="(270,280)"/>
-    <wire from="(240,250)" to="(280,250)"/>
-    <wire from="(200,290)" to="(210,290)"/>
-    <wire from="(210,250)" to="(210,290)"/>
-    <wire from="(270,220)" to="(270,240)"/>
-    <wire from="(260,270)" to="(260,280)"/>
-    <wire from="(240,270)" to="(260,270)"/>
-    <wire from="(240,280)" to="(250,280)"/>
-    <wire from="(150,290)" to="(150,300)"/>
-    <wire from="(200,290)" to="(200,300)"/>
-    <wire from="(130,250)" to="(140,250)"/>
-    <wire from="(200,200)" to="(200,210)"/>
-    <comp lib="6" loc="(250,220)" name="7-Segment Display"/>
-    <comp lib="6" loc="(200,200)" name="LED">
+    <wire from="(380,330)" to="(410,330)"/>
+    <wire from="(380,350)" to="(410,350)"/>
+    <wire from="(380,320)" to="(400,320)"/>
+    <wire from="(380,360)" to="(400,360)"/>
+    <wire from="(400,310)" to="(400,320)"/>
+    <wire from="(400,360)" to="(400,370)"/>
+    <wire from="(410,350)" to="(410,370)"/>
+    <wire from="(410,310)" to="(410,330)"/>
+    <wire from="(380,310)" to="(390,310)"/>
+    <wire from="(380,370)" to="(390,370)"/>
+    <wire from="(420,310)" to="(420,340)"/>
+    <wire from="(380,340)" to="(420,340)"/>
+    <wire from="(350,380)" to="(360,380)"/>
+    <wire from="(350,340)" to="(360,340)"/>
+    <wire from="(360,340)" to="(360,380)"/>
+    <wire from="(360,290)" to="(360,300)"/>
+    <wire from="(290,340)" to="(300,340)"/>
+    <wire from="(360,380)" to="(360,390)"/>
+    <wire from="(310,380)" to="(310,390)"/>
+    <comp loc="(370,300)" name="PAINEL"/>
+    <comp lib="6" loc="(360,290)" name="LED">
       <a name="facing" val="south"/>
       <a name="color" val="#04f000"/>
     </comp>
-    <comp lib="0" loc="(200,300)" name="Pin">
+    <comp lib="6" loc="(320,300)" name="RGBLed">
+      <a name="facing" val="south"/>
+      <a name="multibit" val="true"/>
+    </comp>
+    <comp lib="0" loc="(360,390)" name="Pin">
       <a name="facing" val="north"/>
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="6" loc="(130,250)" name="Button"/>
-    <comp loc="(240,230)" name="Circuito Display"/>
-    <comp loc="(150,210)" name="Guess"/>
-    <comp lib="6" loc="(160,210)" name="RGBLed">
-      <a name="facing" val="south"/>
-      <a name="multibit" val="true"/>
-    </comp>
-    <comp lib="0" loc="(150,300)" name="Pin">
+    <comp loc="(310,300)" name="Guess"/>
+    <comp lib="6" loc="(290,340)" name="Button"/>
+    <comp loc="(380,320)" name="Circuito Display"/>
+    <comp lib="6" loc="(390,310)" name="7-Segment Display"/>
+    <comp lib="0" loc="(310,390)" name="Pin">
       <a name="facing" val="north"/>
       <a name="tristate" val="false"/>
     </comp>
+  </circuit>
+  <circuit name="rgb">
+    <a name="circuit" val="rgb"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <appear>
+      <rect height="30" rx="5" ry="5" stroke="#000000" stroke-width="2" width="110" x="50" y="50"/>
+      <circ-anchor facing="east" height="6" width="6" x="47" y="47"/>
+    </appear>
+  </circuit>
+  <circuit name="PAINEL">
+    <a name="circuit" val="PAINEL"/>
+    <a name="clabel" val=""/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="Dialog plain 12"/>
+    <a name="clabelcolor" val="#000000"/>
+    <appear>
+      <rect fill="#0f0f0f" height="80" rx="5" ry="5" stroke="#000000" stroke-width="2" width="60" x="50" y="50"/>
+      <circ-anchor facing="east" height="6" width="6" x="47" y="47"/>
+    </appear>
   </circuit>
   <circuit name="Circuito Display">
     <a name="circuit" val="Circuito Display"/>
@@ -143,8 +167,7 @@
     <a name="clabelfont" val="Dialog plain 12"/>
     <a name="clabelcolor" val="#000000"/>
     <appear>
-      <rect fill="#074000" height="80" rx="5" ry="5" stroke="#000000" stroke-width="2" width="30" x="50" y="20"/>
-      <path d="M60,20 Q64,29 68,20" fill="none" stroke="#808080" stroke-width="2"/>
+      <rect fill="#074000" fill-opacity="0.000" height="80" rx="5" ry="5" stroke="#000000" stroke-opacity="0.000" stroke-width="2" width="30" x="50" y="20"/>
       <circ-port height="10" pin="360,120" width="10" x="75" y="45"/>
       <circ-port height="10" pin="360,190" width="10" x="75" y="55"/>
       <circ-port height="10" pin="360,260" width="10" x="75" y="65"/>
@@ -255,9 +278,9 @@
     <a name="clabelcolor" val="#000000"/>
     <appear>
       <rect fill="#074000" fill-opacity="0.980" height="80" rx="5" ry="5" stroke="#010d00" stroke-width="2" width="70" x="50" y="40"/>
-      <text font-family="MesloLGM Nerd Font Mono" font-size="12" font-style="italic" font-weight="bold" text-anchor="middle" x="84" y="63">Adivinhe</text>
-      <text font-family="Dialog" font-size="12" font-style="italic" font-weight="bold" text-anchor="middle" x="85" y="103">Número!</text>
-      <text font-family="Dialog" font-size="12" font-style="italic" font-weight="bold" text-anchor="middle" x="83" y="83">o</text>
+      <text fill="#fcfcfc" font-family="MesloLGM Nerd Font Mono" font-size="12" font-style="italic" font-weight="bold" text-anchor="middle" x="84" y="63">Adivinhe</text>
+      <text fill="#ffffff" font-family="Dialog" font-size="12" font-style="italic" font-weight="bold" text-anchor="middle" x="85" y="103">Número!</text>
+      <text fill="#ffffff" font-family="Dialog" font-size="12" font-style="italic" font-weight="bold" text-anchor="middle" x="83" y="83">o</text>
       <circ-port height="8" pin="40,240" width="8" x="56" y="116"/>
       <circ-port height="8" pin="40,290" width="8" x="46" y="76"/>
       <circ-port height="8" pin="80,420" width="8" x="106" y="116"/>
@@ -494,22 +517,6 @@
     <wire from="(260,190)" to="(270,190)"/>
     <wire from="(130,310)" to="(200,310)"/>
     <comp lib="1" loc="(240,120)" name="AND Gate"/>
-    <comp lib="1" loc="(240,160)" name="AND Gate">
-      <a name="negate0" val="true"/>
-    </comp>
-    <comp lib="1" loc="(240,320)" name="AND Gate">
-      <a name="negate0" val="true"/>
-      <a name="negate1" val="true"/>
-    </comp>
-    <comp lib="1" loc="(240,240)" name="AND Gate">
-      <a name="inputs" val="3"/>
-      <a name="negate1" val="true"/>
-      <a name="negate2" val="true"/>
-    </comp>
-    <comp lib="7" loc="(186,357)" name="Text">
-      <a name="text" val="FEITO POR ARTHUR"/>
-      <a name="font" val="Dialog bolditalic 20"/>
-    </comp>
     <comp lib="0" loc="(370,220)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -519,15 +526,27 @@
       <a name="tristate" val="false"/>
       <a name="label" val="C"/>
     </comp>
+    <comp lib="1" loc="(240,160)" name="AND Gate">
+      <a name="negate0" val="true"/>
+    </comp>
     <comp lib="0" loc="(130,100)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
       <a name="label" val="B"/>
     </comp>
+    <comp lib="1" loc="(240,320)" name="AND Gate">
+      <a name="negate0" val="true"/>
+      <a name="negate1" val="true"/>
+    </comp>
     <comp lib="0" loc="(100,100)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
       <a name="label" val="A"/>
+    </comp>
+    <comp lib="1" loc="(240,240)" name="AND Gate">
+      <a name="inputs" val="3"/>
+      <a name="negate1" val="true"/>
+      <a name="negate2" val="true"/>
     </comp>
     <comp lib="1" loc="(240,200)" name="AND Gate">
       <a name="inputs" val="3"/>
@@ -606,10 +625,6 @@
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
       <a name="label" val="D"/>
-    </comp>
-    <comp lib="7" loc="(182,306)" name="Text">
-      <a name="text" val="FEITO POR ARTHUR"/>
-      <a name="font" val="Dialog bolditalic 20"/>
     </comp>
     <comp lib="0" loc="(150,80)" name="Pin">
       <a name="facing" val="south"/>
@@ -721,10 +736,6 @@
     <comp lib="1" loc="(320,180)" name="OR Gate">
       <a name="size" val="70"/>
       <a name="inputs" val="5"/>
-    </comp>
-    <comp lib="7" loc="(182,306)" name="Text">
-      <a name="text" val="FEITO POR ARTHUR"/>
-      <a name="font" val="Dialog bolditalic 20"/>
     </comp>
     <comp lib="0" loc="(120,80)" name="Pin">
       <a name="facing" val="south"/>
@@ -868,10 +879,6 @@
     </comp>
     <comp lib="1" loc="(240,220)" name="AND Gate">
       <a name="negate1" val="true"/>
-    </comp>
-    <comp lib="7" loc="(182,306)" name="Text">
-      <a name="text" val="FEITO POR ARTHUR"/>
-      <a name="font" val="Dialog bolditalic 20"/>
     </comp>
   </circuit>
   <circuit name="Circuito E">
@@ -1027,6 +1034,12 @@
     <wire from="(250,220)" to="(250,290)"/>
     <wire from="(250,220)" to="(290,220)"/>
     <wire from="(160,300)" to="(180,300)"/>
+    <comp lib="1" loc="(220,90)" name="AND Gate">
+      <a name="inputs" val="3"/>
+      <a name="negate0" val="true"/>
+      <a name="negate1" val="true"/>
+      <a name="negate2" val="true"/>
+    </comp>
     <comp lib="0" loc="(160,60)" name="Pin">
       <a name="facing" val="south"/>
       <a name="tristate" val="false"/>
@@ -1038,8 +1051,23 @@
     <comp lib="1" loc="(320,190)" name="OR Gate">
       <a name="inputs" val="6"/>
     </comp>
+    <comp lib="0" loc="(70,60)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
     <comp lib="1" loc="(220,170)" name="AND Gate">
       <a name="negate1" val="true"/>
+    </comp>
+    <comp lib="0" loc="(130,60)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="C"/>
+    </comp>
+    <comp lib="1" loc="(220,250)" name="AND Gate"/>
+    <comp lib="0" loc="(340,190)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
     </comp>
     <comp lib="1" loc="(220,290)" name="AND Gate">
       <a name="inputs" val="3"/>
@@ -1054,31 +1082,6 @@
       <a name="inputs" val="3"/>
       <a name="negate1" val="true"/>
       <a name="negate2" val="true"/>
-    </comp>
-    <comp lib="1" loc="(220,90)" name="AND Gate">
-      <a name="inputs" val="3"/>
-      <a name="negate0" val="true"/>
-      <a name="negate1" val="true"/>
-      <a name="negate2" val="true"/>
-    </comp>
-    <comp lib="7" loc="(153,325)" name="Text">
-      <a name="text" val="FEITO POR ARTHUR"/>
-      <a name="font" val="Dialog bolditalic 20"/>
-    </comp>
-    <comp lib="0" loc="(70,60)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="A"/>
-    </comp>
-    <comp lib="0" loc="(130,60)" name="Pin">
-      <a name="facing" val="south"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="C"/>
-    </comp>
-    <comp lib="1" loc="(220,250)" name="AND Gate"/>
-    <comp lib="0" loc="(340,190)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
     </comp>
   </circuit>
   <circuit name="Circuito G">
@@ -1174,10 +1177,6 @@
     </comp>
     <comp lib="1" loc="(220,170)" name="AND Gate">
       <a name="inputs" val="3"/>
-    </comp>
-    <comp lib="7" loc="(146,294)" name="Text">
-      <a name="text" val="FEITO POR ARTHUR"/>
-      <a name="font" val="Dialog bolditalic 20"/>
     </comp>
     <comp lib="0" loc="(70,60)" name="Pin">
       <a name="facing" val="south"/>
@@ -1895,10 +1894,6 @@
       <a name="tristate" val="false"/>
       <a name="label" val="B"/>
     </comp>
-    <comp lib="7" loc="(352,369)" name="Text">
-      <a name="text" val="FEITO POR ARTHUR"/>
-      <a name="font" val="Dialog bolditalic 32"/>
-    </comp>
     <comp lib="1" loc="(630,270)" name="AND Gate">
       <a name="inputs" val="3"/>
       <a name="negate2" val="true"/>
@@ -2003,16 +1998,5 @@
     <comp lib="0" loc="(540,280)" name="Tunnel">
       <a name="label" val="B2"/>
     </comp>
-  </circuit>
-  <circuit name="PAINEL">
-    <a name="circuit" val="PAINEL"/>
-    <a name="clabel" val=""/>
-    <a name="clabelup" val="east"/>
-    <a name="clabelfont" val="Dialog plain 12"/>
-    <a name="clabelcolor" val="#000000"/>
-    <appear>
-      <rect fill="#ffffff" height="170" rx="5" ry="5" stroke="#000000" stroke-width="2" width="220" x="50" y="50"/>
-      <circ-anchor facing="east" height="6" width="6" x="157" y="137"/>
-    </appear>
   </circuit>
 </project>
