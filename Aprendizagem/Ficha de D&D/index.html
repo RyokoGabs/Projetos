@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FICHA DE D&D</title>
+</head>
+
+<body>
+    <h1>FICHA DE D&D</h1>
+    <main>
+        <section>
+            <form>
+                
+                <fieldset><!--Informações do Personagem-->
+                    <legend>Personagem</legend>
+                    
+                    <div id="painel-nome-do-personagem"> <!--Nome do personagem-->
+                        <label for="nome-do-personagem">
+                            Nome do Personagem:
+                        </label>
+                        <input 
+                            type="text" 
+                            name="nome_do_personagem" 
+                            id="nome-do-personagem" 
+                            class="nome-do-personagem"
+                        >
+                    </div>
+
+                    <div id="painel-antecedente"><!--Antecedente-->
+                        <label for="antecedente">
+                            Antecedente:
+                        </label>
+                        <input 
+                            type="text" 
+                            name="antecedente" 
+                            id="antecedente" 
+                            class="antecedente"
+                        >
+                    </div>
+
+                    <div id="painel-especie"> <!--Espécie-->
+                        <label for="especie">
+                            Espécie:
+                        </label>
+                        <input 
+                            type="text" 
+                            name="especie" 
+                            id="especie" 
+                            class="especie"
+                        >
+                    </div>
+
+                    <div id="painel-de-classe-e-subclasse"><!--Classe & Subclasse & Nível-->
+                        <label for="classe-personagem">
+                            Classe:
+                        </label>
+                        <select 
+                            name="classe" 
+                            id="classe-personagem" 
+                            class="caixa-selecao"
+                        >
+                            <!--Apenas visual-->
+                            <option value="barbaro">Bárbaro</option>
+                            <option value="bardo">Bardo</option>
+                            <option value="guerreiro">Guerreiro</option>
+                            <option value="mago">Mago</option>
+                        </select>
+
+                        <label for="subclasse-personagem">
+                            Subclasse:
+                        </label>
+                        <select 
+                            name="subclasse" 
+                            id="subclasse-personagem" 
+                            class="caixa-selecao"
+                        >
+                            <!--Apenas visual-->
+                            <option value="barbaro">Caminho do Furioso</option>
+                            <option value="bardo">Colégio da Bravura</option>
+                            <option value="guerreiro">Campeão</option>
+                            <option value="mago">Escola de Evocação</option>
+                        </select>
+                        <div id="painel-de-nivel">
+                        <label for="nivel-do-personagem">
+                            Nível:
+                        </label>
+                        <input 
+                            type="number" 
+                            value="1" 
+                            min="1" 
+                            max="20" 
+                            name="nivel" 
+                            id="nivel-do-personagem" 
+                            class="nivel"
+                        >
+                        </div>
+                    </div>
+
+                    <div id="painel-alinhamento"><!--Alinhamento-->
+                        <label for="alinhamento-do-personagem">
+                            Alinhamento:
+                        </label>
+                        <input 
+                            type="text" 
+                            name="alinhamento" 
+                            id="alinhamento-do-personagem" 
+                            class="alinhamento"
+                        >
+                    </div>
+                </fieldset>
+
+                <fieldset><!--Estatísticas de Combate-->
+                    <legend>Estatísticas de Combate</legend>
+                    
+                    <div id="painel-de-saude"> <!--Saúde-->
+                        <label>
+                            Vida:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="vida_atual" 
+                            id="vida-atual" 
+                            class="saude" 
+                            placeholder="Atual"
+                        >
+                        <input 
+                            type="number" 
+                            name="vida_maxima" 
+                            id="vida-maximo" 
+                            class="saude" 
+                            placeholder="Máxima"
+                        >
+                        <input 
+                            type="number" 
+                            name="vida_temporaria" 
+                            id="vida-temporario" 
+                            class="saude" 
+                            placeholder="Temporária"
+                        >
+                    </div>
+
+                    <div id="painel-de-dado-de-vida"><!--Dado de Vida-->
+                        <label for="dados-de-vida-do-personagem">
+                            Dados de Vida:
+                        </label>
+                        <input 
+                            type="text" 
+                            name="dados_de_vida" 
+                            id="dados-de-vida-do-personagem" 
+                            class="saude"
+                        >
+                    </div>
+                    
+                    <div id="painel-salvagurda-contra-morte"><!--SALVA. CONTRA MORTE-->
+                        <label>
+                            Salva. Contra Morte:
+                        </label>
+                        <div><!--Sucesso-->
+                            <label>
+                                Sucesso:
+                            </label>
+                            <input 
+                                type="checkbox" 
+                                name="sucesso_contra_morte1" 
+                                id="sucesso-contra-morte1" 
+                                class="sucesso-contra-morte"
+                            >
+                            <input 
+                                type="checkbox" 
+                                name="sucesso_contra_morte2" 
+                                id="sucesso-contra-morte2" 
+                                class="sucesso-contra-morte"
+                            >
+                            <input 
+                                type="checkbox" 
+                                name="sucesso_contra_morte3" 
+                                id="sucesso-contra-morte3" 
+                                class="sucesso-contra-morte"
+                            >
+                        </div>
+                        <div><!--Fracasso-->
+                            <label>
+                                Fracasso:
+                            </label>
+                            <input 
+                                type="checkbox" 
+                                name="fracasso_contra_morte1" 
+                                id="fracasso-contra-morte1" 
+                                class="fracasso-contra-morte"
+                            >
+                            <input 
+                                type="checkbox" 
+                                name="fracasso_contra_morte2" 
+                                id="fracasso-contra-morte2" 
+                                class="fracasso-contra-morte"
+                            >
+                            <input 
+                                type="checkbox" 
+                                name="fracasso_contra_morte3" 
+                                id="fracasso-contra-morte3" 
+                                class="fracasso-contra-morte"
+                            >
+                        </div>
+                    </div>
+
+                    <div id="painel-de-classe-de-armadura"><!--Classe de Armadura-->
+                        <label for="ca-do-personagem">
+                            CA:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="classe_de_armadura" 
+                            id="ca-do-personagem" 
+                            class="classe-de-armadura"
+                        >
+                    </div>
+
+                    <div id="painel-de-iniciativa"><!--Iniciativa-->
+                        <label for="iniciativa-do-personagem">
+                            Iniciativa:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="iniciativa" 
+                            id="iniciativa-do-personagem" 
+                            class="iniciativa" 
+                            data-iniciativa=""
+                        >
+                    </div>
+
+                    <div id="painel-de-deslocamento"><!--Deslocamento-->
+                        <label for="deslocamento-do-personagem">
+                            Deslocamento:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="deslocamento" 
+                            id="deslocamento-do-personagem" 
+                            class="deslocamento" 
+                            data-deslocamento=""
+                        >
+                    </div>
+
+                    <div id="painel-de-tamanho"><!--Tamanho-->
+                        <label for="tamanho-do-personagem">
+                            Tamanho:
+                        </label>
+                        <select 
+                            name="tamanho" 
+                            id="tamanho-do-personagem" 
+                            class="tamanho-do-personagem"
+                        >
+                            <option value="pequeno">Pequeno</option>
+                            <option value="medio">Médio</option>
+                            <option value="grande">Grande</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset><!--ATRIBUTOS & PERÍCIAS-->
+                    <legend>ATRIBUTOS & PERÍCIAS</legend>
+                    
+                    <div id="bonus-de-proficiencia"><!--Bônus de proficiência-->
+                        <label for="bonus-de-proficiencia-do-personagem">
+                            Bônus de Proficiência:
+                        </label>
+                        <select 
+                            name="bonus_de_proficiencia" 
+                            id="bonus-de-proficiencia-do-personagem" 
+                            class="bonus-de-proficiencia"
+                        >
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                    </div>
+
+                    <div><!--Inspiração Heroica-->
+                        <label for="inspiracao-heroica">
+                            Inspiração Heroica:
+                        </label>
+                        <input 
+                            type="checkbox" 
+                            name="inspiracao_heroica" 
+                            id="inspiracao-heroica" 
+                            class="inspiracao-heroica-selecao"
+                        >
+                    </div>
+                    
+                    <!-- ================= FORÇA ================= -->
+                    <h4>FORÇA</h4>
+                    <div id="forca">
+                        <input 
+                            type="number" 
+                            max="20" 
+                            name="mod_forca" 
+                            id="mod-forca" 
+                            class="forca" 
+                            placeholder="Modificador"
+                        > 
+                        <span>/</span>
+                        <input 
+                            type="number" 
+                            max="20" 
+                            name="valor_forca" 
+                            id="valor-forca" 
+                            class="forca" 
+                            placeholder="Valor"
+                        >
+
+                        <!--Salvaguarda de força-->
+                        <input 
+                            type="checkbox" 
+                            name="prof_salvaguarda_forca" 
+                            id="prof-salva-forca" 
+                            class="salvaguarda-de-forca-selecao"
+                        >
+                        <label for="prof-salva-forca">
+                            Salva. de Força:
+                        </label>
+                        <input 
+                            type="number" 
+                            max="20" 
+                            name="valor_salvaguarda_forca" 
+                            id="valor-salva-forca" 
+                            class="forca" 
+                            placeholder="Mod. Salva"
+                        >
+                    </div>
+
+                    <div id="pericias-de-forca"><!--Perícias de Força-->
+                        <input 
+                            type="checkbox" 
+                            name="prof_atletismo" 
+                            id="prof-atletismo" 
+                            class="forca"
+                        >
+                        <label for="prof-atletismo">
+                            Atletismo:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="valor_atletismo" 
+                            id="valor-atletismo" 
+                            class="forca"
+                        >
+                    </div>
+
+                    <!-- ================= DESTREZA ================= -->
+                    <h4>DESTREZA</h4>
+                    <div id="destreza">
+                        <input 
+                            type="number" 
+                            max="20" 
+                            name="mod_destreza" 
+                            id="mod-destreza" 
+                            class="destreza" 
+                            placeholder="Modificador"
+                        > 
+                        <span>/</span>
+                        <input 
+                            type="number" 
+                            max="20" 
+                            name="valor_destreza" 
+                            id="valor-destreza" 
+                            class="destreza" 
+                            placeholder="Valor"
+                        >
+
+                        <!--Salvaguarda de destreza-->
+                        <input 
+                            type="checkbox" 
+                            name="prof_salvaguarda_destreza" 
+                            id="prof-salva-destreza" 
+                            class="salvaguarda-de-destreza-selecao"
+                        >
+                        <label for="prof-salva-destreza">
+                            Salva. de Destreza:
+                        </label>
+                        <input 
+                            type="number" 
+                            max="20" 
+                            name="valor_salvaguarda_destreza" 
+                            id="valor-salva-destreza" 
+                            class="destreza" 
+                            placeholder="Mod. Salva"
+                        >
+                    </div>
+
+                    <div id="pericias-de-destreza"><!--Perícias de Destreza--> 
+                        <input 
+                            type="checkbox" 
+                            name="prof_acrobacia" 
+                            id="prof-acrobacia" 
+                            class="destreza"
+                        >
+                        <label for="prof-acrobacia">
+                            Acrobacia:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="valor_acrobacia" 
+                            id="valor-acrobacia" 
+                            class="destreza"
+                        >
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            name="prof_furtividade" 
+                            id="prof-furtividade" 
+                            class="destreza"
+                        >
+                        <label for="prof-furtividade">
+                            Furtividade:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="valor_furtividade" 
+                            id="valor-furtividade" 
+                            class="destreza"
+                        >
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            name="prof_prestidigitacao" 
+                            id="prof-prestidigitacao" 
+                            class="destreza"
+                        >
+                        <label for="prof-prestidigitacao">
+                            Prestidigitação:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="valor_prestidigitacao" 
+                            id="valor-prestidigitacao" 
+                            class="destreza"
+                        >
+                    </div>
+
+                    <!-- ================= CONSTITUIÇÃO ================= -->
+                    <h4>CONSTITUIÇÃO</h4>
+                    <div id="constituicao">
+                        <input 
+                            type="number" 
+                            max="20" 
+                            name="mod_constituicao" 
+                            id="mod-constituicao" 
+                            class="constituicao" 
+                            placeholder="Modificador"
+                        > 
+                        <span>/</span>
+                        <input 
+                            type="number" 
+                            max="20" 
+                            name="valor_constituicao" 
+                            id="valor-constituicao" 
+                            class="constituicao" 
+                            placeholder="Valor"
+                        >
+
+                        <!--Salvaguarda de Constituição-->
+                        <input 
+                            type="checkbox" 
+                            name="prof_salvaguarda_constituicao" 
+                            id="prof-salva-constituicao" 
+                            class="salvaguarda-de-constituicao-selecao"
+                        >
+                        <label for="prof-salva-constituicao">
+                            Salva. de Constituição:
+                        </label>
+                        <input 
+                            type="number" 
+                            max="20" 
+                            name="valor_salvaguarda_constituicao" 
+                            id="valor-salva-constituicao" 
+                            class="constituicao" 
+                            placeholder="Mod. Salva"
+                        >
+                    </div>
+
+                    <!-- ================= INTELIGÊNCIA ================= -->
+                    <h4>INTELIGÊNCIA</h4>
+                    <div id="inteligencia">
+                        <input 
+                            type="number" 
+                            max="20" 
+                            name="mod_inteligencia" 
+                            id="mod-inteligencia" 
+                            class="inteligencia" 
+                            placeholder="Modificador"
+                        > 
+                        <span>/</span>
+                        <input 
+                            type="number" 
+                            max="20" 
+                            name="valor_inteligencia" 
+                            id="valor-inteligencia" 
+                            class="inteligencia" 
+                            placeholder="Valor"
+                        >
+
+                        <!--Salvaguarda de inteligência-->
+                        <input 
+                            type="checkbox" 
+                            name="prof_salvaguarda_inteligencia" 
+                            id="prof-salva-inteligencia" 
+                            class="salvaguarda-de-inteligencia-selecao"
+                        >
+                        <label for="prof-salva-inteligencia">
+                            Salva. de Inteligência:
+                        </label>
+                        <input 
+                            type="number" 
+                            max="20" 
+                            name="valor_salvaguarda_inteligencia" 
+                            id="valor-salva-inteligencia" 
+                            class="inteligencia" 
+                            placeholder="Mod. Salva"
+                        >
+                    </div>
+
+                    <div id="pericias-de-inteligencia"><!--Perícias de Inteligência--> 
+                        <input 
+                            type="checkbox" 
+                            name="prof_arcanismo" 
+                            id="prof-arcanismo" 
+                            class="inteligencia"
+                        >
+                        <label for="prof-arcanismo">
+                            Arcanismo:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="valor_arcanismo" 
+                            id="valor-arcanismo" 
+                            class="inteligencia"
+                        >
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            name="prof_historia" 
+                            id="prof-historia" 
+                            class="inteligencia"
+                        >
+                        <label for="prof-historia">
+                            História:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="valor_historia" 
+                            id="valor-historia" 
+                            class="inteligencia"
+                        >
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            name="prof_investigacao" 
+                            id="prof-investigacao" 
+                            class="inteligencia"
+                        >
+                        <label for="prof-investigacao">
+                            Investigação:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="valor_investigacao" 
+                            id="valor-investigacao" 
+                            class="inteligencia"
+                        >
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            name="prof_natureza" 
+                            id="prof-natureza" 
+                            class="inteligencia"
+                        >
+                        <label for="prof-natureza">
+                            Natureza:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="valor_natureza" 
+                            id="valor-natureza" 
+                            class="inteligencia"
+                        >
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            name="prof_religiao" 
+                            id="prof-religiao" 
+                            class="inteligencia"
+                        >
+                        <label for="prof-religiao">
+                            Religião:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="valor_religiao" 
+                            id="valor-religiao" 
+                            class="inteligencia"
+                        >
+                    </div>
+
+                    <!-- ================= SABEDORIA ================= -->
+                    <h4>SABEDORIA</h4>
+                    <div id="sabedoria">
+                        <input 
+                            type="number" 
+                            max="20" 
+                            name="mod_sabedoria" 
+                            id="mod-sabedoria" 
+                            class="sabedoria" 
+                            placeholder="Modificador"
+                        > 
+                        <span>/</span>
+                        <input 
+                            type="number" 
+                            max="20" 
+                            name="valor_sabedoria" 
+                            id="valor-sabedoria" 
+                            class="sabedoria" 
+                            placeholder="Valor"
+                        >
+
+                        <!--Salvaguarda de sabedoria-->
+                        <input 
+                            type="checkbox" 
+                            name="prof_salvaguarda_sabedoria" 
+                            id="prof-salva-sabedoria" 
+                            class="salvaguarda-de-sabedoria-selecao"
+                        >
+                        <label for="prof-salva-sabedoria">
+                            Salva. de Sabedoria:
+                        </label>
+                        <input 
+                            type="number" 
+                            max="20" 
+                            name="valor_salvaguarda_sabedoria" 
+                            id="valor-salva-sabedoria" 
+                            class="sabedoria" 
+                            placeholder="Mod. Salva"
+                        >
+                    </div>
+                    
+                    <div id="pericias-de-sabedoria"><!--Perícias de Sabedoria--> 
+                        <input 
+                            type="checkbox" 
+                            name="prof_lidar_com_animais" 
+                            id="prof-lidar-com-animais" 
+                            class="sabedoria"
+                        >
+                        <label for="prof-lidar-com-animais">
+                            Lidar com Animais:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="valor_lidar_com_animais" 
+                            id="valor-lidar-com-animais" 
+                            class="sabedoria"
+                        >
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            name="prof_intuicao" 
+                            id="prof-intuicao" 
+                            class="sabedoria"
+                        >
+                        <label for="prof-intuicao">
+                            Intuição:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="valor_intuicao" 
+                            id="valor-intuicao" 
+                            class="sabedoria"
+                        >
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            name="prof_medicina" 
+                            id="prof-medicina" 
+                            class="sabedoria"
+                        >
+                        <label for="prof-medicina">
+                            Medicina:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="valor_medicina" 
+                            id="valor-medicina" 
+                            class="sabedoria"
+                        >
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            name="prof_percepcao" 
+                            id="prof-percepcao" 
+                            class="sabedoria"
+                        >
+                        <label for="prof-percepcao">
+                            Percepção:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="valor_percepcao" 
+                            id="valor-percepcao" 
+                            class="sabedoria"
+                        >
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            name="prof_sobrevivencia" 
+                            id="prof-sobrevivencia" 
+                            class="sabedoria"
+                        >
+                        <label for="prof-sobrevivencia">
+                            Sobrevivência:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="valor_sobrevivencia" 
+                            id="valor-sobrevivencia" 
+                            class="sabedoria"
+                        >
+                    </div>
+
+                    <!-- ================= CARISMA ================= -->
+                    <h4>CARISMA</h4>
+                    <div id="carisma">
+                        <input 
+                            type="number" 
+                            max="20" 
+                            name="mod_carisma" 
+                            id="mod-carisma" 
+                            class="carisma" 
+                            placeholder="Modificador"
+                        > 
+                        <span>/</span>
+                        <input 
+                            type="number" 
+                            max="20" 
+                            name="valor_carisma" 
+                            id="valor-carisma" 
+                            class="carisma" 
+                            placeholder="Valor"
+                        >
+
+                        <!--Salvaguarda de Carisma-->
+                        <input 
+                            type="checkbox" 
+                            name="prof_salvaguarda_carisma" 
+                            id="prof-salva-carisma" 
+                            class="salvaguarda-de-carisma-selecao"
+                        >
+                        <label for="prof-salva-carisma">
+                            Salva. de Carisma:
+                        </label>
+                        <input 
+                            type="number" 
+                            max="20" 
+                            name="valor_salvaguarda_carisma" 
+                            id="valor-salva-carisma" 
+                            class="carisma" 
+                            placeholder="Mod. Salva"
+                        >
+                    </div>
+
+                    <div id="pericias-de-carisma"><!--Perícias de Carisma--> 
+                        <input 
+                            type="checkbox" 
+                            name="prof_atuacao" 
+                            id="prof-atuacao" 
+                            class="carisma"
+                        >
+                        <label for="prof-atuacao">
+                            Atuação:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="valor_atuacao" 
+                            id="valor-atuacao" 
+                            class="carisma"
+                        >
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            name="prof_enganacao" 
+                            id="prof-enganacao" 
+                            class="carisma"
+                        >
+                        <label for="prof-enganacao">
+                            Enganação:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="valor_enganacao" 
+                            id="valor-enganacao" 
+                            class="carisma"
+                        >
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            name="prof_intimidacao" 
+                            id="prof-intimidacao" 
+                            class="carisma"
+                        >
+                        <label for="prof-intimidacao">
+                            Intimidação:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="valor_intimidacao" 
+                            id="valor-intimidacao" 
+                            class="carisma"
+                        >
+                    </div>
+                    <div>
+                        <input 
+                            type="checkbox" 
+                            name="prof_persuasao" 
+                            id="prof-persuasao" 
+                            class="carisma"
+                        >
+                        <label for="prof-persuasao">
+                            Persuasão:
+                        </label>
+                        <input 
+                            type="number" 
+                            name="valor_persuasao" 
+                            id="valor-persuasao" 
+                            class="carisma"
+                        >
+                    </div>                  
+                </fieldset>
+
+                <fieldset><!--Armas-->
+                    <legend>Armas e Truques de Dano</legend>
+
+                    <div id="lista-armas">
+
+                    <div class="arma">
+                    <input type="text" placeholder="Nome">
+                    <input type="text" placeholder="Bônus">
+                    <input type="text" placeholder="Dano">
+                    <input type="text" placeholder="Observações">
+                    <button type="button" class="remover">🗑</button>
+                    </div>
+
+                    </div>
+                    <button type="button" id="adicionar-arma">
+                        + Adicionar arma
+                    </button>
+                </fieldset>
+
+                <fieldset><!--Profieciência em Equipamentos-->
+                    <legend>TREINAMENTO E PROFICIÊNCIA EM EQUIPAMENTOS</legend>
+                    <div id="lista-de-proficiencia-em-equipamentos">
+                        <label for="treinamento-em-armaduras">
+                            Treinamento em Armaduras:
+                        </label>
+                        <div>
+                            <label for="prof-armadura-leves">
+                                Leve:
+                            </label>
+                            <input 
+                                type="checkbox" 
+                                name="prof_armadura-leves" 
+                                id="prof-armadura-leves"
+                                class="prof-armadura-leves"
+                            >
+
+                            <label for="prof-armadura-medias">
+                                Médias
+                            </label>
+                            <input 
+                                type="checkbox" 
+                                name="prof_armadura-medias" 
+                                id="prof-armadura-medias"
+                                class="prof-armadura-media"
+                            >
+
+                            <label for="prof-armadura-pesadas">
+                                Pesadas:
+                            </label>
+                            <input 
+                                type="checkbox" 
+                                name="prof_armadura_pesadas" 
+                                id="prof-armadura-pesadas"
+                                class="prof-armadura-pesadas"
+                            >
+
+                            <label for="prof-escudos">
+                                Escudos:
+                            </label>
+                            <input 
+                                type="checkbox" 
+                                name="prof_escudos" 
+                                id="prof-escudos"
+                                class="prof-escudos"
+                            >
+                        </div>
+                        <div>
+                            <textarea 
+                                name="prof_em_armas" 
+                                id="prof-em-armas"
+                                class="prof-em-armas"
+                                placeholder="Sua proficiencia em Armas..."></textarea>
+                            <button
+                                name="add_prof_em_armas"
+                                id="add-prof-em-armas"
+                                class="add-prof-em-armas">
+                                + Adicionar Proficiência em Armas
+                            </button>
+                        </div>
+                        <div>
+                            <textarea 
+                                name="prof_em_ferramentas" 
+                                id="prof-em-ferramentas"
+                                class="prof-em-ferramentas"
+                                placeholder="Sua proficiencia em Ferramentas..."></textarea>
+                            <button
+                                name="add_prof_em_ferramentas"
+                                id="add-prof-em-ferramentas"
+                                class="add-prof-em-ferramentas">
+                                + Adicionar Proficiência em Ferramentas
+                            </button>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset> <!--Caracteristicas do Personagem-->
+                    <legend>Habilidades do Personagem</legend>
+                    <div> <!--Classe-->
+                        <textarea 
+                            name="habilidade_de_classe" 
+                            id="habilidade-de-classe" 
+                            class="habilidade-de-classe"
+                            placeholder="Sua Habilidade de Classe"
+                            ></textarea>
+                        <button 
+                            type="button" 
+                            id="add-habilidade-de-classe" 
+                            class="add-habilidade-de-classe">
+                            + Adicionar Habilidade de Classe
+                        </button>
+                    </div>
+                    <div><!--Subclasse-->
+                        <textarea 
+                            name="habilidade_de_subclasse" 
+                            id="habilidade-de-subclasse" 
+                            class="habilidade-de-subclasse"
+                            placeholder="Sua Habilidade de Subclasse"
+                            ></textarea>
+                        <button 
+                            type="button" 
+                            id="add-habilidade-de-subclasse" 
+                            class="add-habilidade-de-subclasse">
+                            + Adicionar Habilidade de Sublasse
+                        </button>
+                    </div>
+                    
+                    <div> <!--Traço de espécies-->
+                        <textarea 
+                            name="habilidade_da_especie" 
+                            id="habilidade-da-especie" 
+                            class="habilidade-de-classe"
+                            placeholder="Sua Habilidade da Espécie"
+                            ></textarea>
+                        <button 
+                            type="button" 
+                            id="add-habilidade-da-especie" 
+                            class="add-habilidade-da-especie">
+                            + Adicionar Habilidade da Espécie
+                        </button>
+                    </div>
+
+                    <div> <!--Talentos-->
+                        <textarea 
+                            name="habilidade_do_talento" 
+                            id="habilidade-do-talento" 
+                            class="habilidade-do-talento"
+                            placeholder="Sua Habilidade do Talento"
+                            ></textarea>
+                        <button 
+                            type="button" 
+                            id="add-habilidade-do-talento" 
+                            class="add-habilidade-do-talento">
+                            + Adicionar Talento
+                        </button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>
